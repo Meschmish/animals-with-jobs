@@ -1,7 +1,10 @@
 //Titta i index.html och hitta den div där info om varje djur ska skrivas ut.
 //Typa upp funktionens parameter
+import { Animal } from "./IAnimal.js";
 
-export default function renderAnimalInfo(animal) {
+export default function renderAnimalInfo(animal: Animal) {
+
+    
   //=====================================================//
   //Rendera ut bilden på djuret
   //Skriv ut djurets namn och typ av djur. Följ det här formatet: "Gina the Giraffe"
@@ -24,4 +27,4 @@ export default function renderAnimalInfo(animal) {
   //                  Eating
   //Bonus om du skriver ut rubriken "Skills" med CSS.
   //=====================================================//
-}
+};

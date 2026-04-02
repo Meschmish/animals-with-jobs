@@ -2,29 +2,22 @@
 //Rendera ut en lista över djurens namn på skärmen
 //Varje list-item ska ha en event-lyssnare som kallar på "renderAnimalInfo"
 //Typa upp funktionens parameter
-
-import { Animal } from "./IAnimal.js";
 import renderAnimalInfo from "./renderAnimalInfo.js";
-
-export default function renderListOfAnimals(animals: Animal[]) {
-    const listContainer = document.querySelector(".list-of-animals ul"); 
-    
-    if (!listContainer) return;
-
+export default function renderListOfAnimals(animals) {
+    const listContainer = document.querySelector(".list-of-animals ul");
+    if (!listContainer)
+        return;
     // Rensar allt innehåll i listContainer innan de skrivs ut igen. Säkrare än innerHTML
-    listContainer.replaceChildren(); 
-
+    listContainer.replaceChildren();
     // Loopar igenom varje djur
     animals.forEach((animal) => {
         const li = document.createElement("li");
         li.className = "listOfNames";
-
-        li.textContent = animal.name; 
-
+        li.textContent = animal.name;
         li.addEventListener("click", () => {
             renderAnimalInfo(animal);
         });
-
         listContainer.appendChild(li);
     });
-};
+}
+;
