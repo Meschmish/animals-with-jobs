@@ -11,7 +11,6 @@ export default async function fetchAnimals(): Promise<Animal[] | null> {
 
         if (response.ok) {
             const data: Animal[] = await response.json();
-            console.log(data);   // Ta bort console log innan inlämning
             return data;
         }
         
